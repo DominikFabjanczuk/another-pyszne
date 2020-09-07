@@ -74,6 +74,7 @@ body {
   &__form{
     padding: 16px;
     width: 100%;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 90px;  
     &--text{    
