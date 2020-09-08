@@ -2,42 +2,62 @@
 
 @import "_variables";
 @import "modules/hello.scss";
+@import "restaurant.scss";
 
 body {
   background: lightblue;
   color: #fff;
 }
 
-.top-header{
+.top-header {
   display: flex;
   padding: 16px;
-  &__logo{
-    width: 50%;
+  &__logo {
+    width: max-content;
     height: 80px;
     min-width: 80px;
-    &--picture{
+    flex: 0 0 80px;
+    &--picture {
       height: 100%;
+      cursor: pointer;
     }
   }
-  &__buttons{
-    width: 50%;
-    min-width: 68px;
+  &__restaurant {
     display: flex;
-    justify-content: flex-end;    
+    justify-content: center;
     align-items: center;
-    &--flag{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    &--button {
+      cursor: pointer;
+      color: white;
+      background: lightblue;
+      border: 0;
+      border-bottom: 2px solid white;
+    }
+  }
+
+  &__buttons {
+    width: max-content;
+    flex: 0 0 68px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &--flag {
       background: url(../assets/img/polandFlag.png);
       border-radius: 50%;
       background-position: 50%;
       margin-right: 20px;
       width: 24px;
       height: 24px;
-      border:0;
-      cursor: pointer;      
+      border: 0;
+      cursor: pointer;
     }
-    &--menu{
+    &--menu {
       background: url(../assets/img/menuIcon.png);
-      border:0;
+      border: 0;
       width: 24px;
       height: 24px;
       cursor: pointer;
@@ -45,66 +65,178 @@ body {
   }
 }
 
-.main{
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;  
-}
-
-.content{
+.main {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  margin:auto;
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   max-width: 650px;
-  &__header{
+  &__header {
     margin-bottom: 0px;
     width: 100%;
     text-align: center;
     font-size: 70px;
   }
-  &__subheader{
+  &__subheader {
     margin-top: 0px;
     font-size: 28px;
-    width: 100%; 
+    width: 100%;
     text-align: center;
   }
-  &__form{
+  &__form {
     padding: 16px;
     width: 100%;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 90px;  
-    &--text{    
+    grid-template-columns: 1fr 90px;
+    &--text {
       height: 30px;
-      border:0;
-      padding:0;
+      border: 0;
+      padding: 0;
       display: block;
-      outline:0;
-      padding-left:10px;
-    }  
+      outline: 0;
+      padding-left: 10px;
+    }
   }
-  &__button-search{  
-    border:0;
-    background:orange;
-    color:white;
+  &__button-search {
+    border: 0;
+    background: orange;
+    color: white;
     height: 30px;
-    padding:0;
+    padding: 0;
     cursor: pointer;
-    &:hover{
-      background:rgb(201, 136, 16)
+    &:hover {
+      background: rgb(201, 136, 16);
     }
   }
 }
 
-.image{
- background: url(../assets/img/pizza2.png);
- background-repeat: no-repeat;
- height: 900px;
- width: 100%;
- background-size: 100%;
+.image {
+  background: url(../assets/img/pizza2.png);
+  background-repeat: no-repeat;
+  height: 900px;
+  width: 100%;
+  background-size: 100%;
 }
 
+.order--from {
+  background: url(../assets//img/pizza.png);
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-weight: bold;
+  min-width: max-content;
+}
 
+.restaurant {
+  &--types {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &--wrapper {
+      width: 100vw;
+      background: lightgray;
+      height: 60px;
+    }
+  }
+  &--type {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: max-content;
+    height: 35px;
+    padding: 0 8px;
+    margin-right: 12px;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover {
+      color: blue;
+    }
+    &--special {
+      border-radius: 16px;
+      background: orange;
+      color: white;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.restaurant {
+  &--list {
+    display: flex;
+    margin: auto;
+    width: 80%;
+  }
+  &--search {
+    padding: 16px;
+    padding-left: 195px;
+    display: flex;
+    height: 35px;
+    width: 100%;
+    &__input {
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+      width: 100%;
+    }
+    &__label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+    }
+    & span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 20px;
+    }
+    &__dd {
+      text-overflow: ellipsis;
+      width: 140px;
+      padding: 6px;
+      flex: 0 0 80px;
+      margin-right: 16px;
+      font-size: 14px;
+    }
+  }
+  &--parent {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+  }
+  &--items {
+    background: orange;
+    width: 100%;
+    margin-left: 16px;
+  }
+  &--filters {
+    flex: 0 0 180px;
+    background: blue;
+  }
+}

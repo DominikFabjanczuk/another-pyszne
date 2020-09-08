@@ -7,3 +7,10 @@ import '../scss/main.scss';
 /* place your code below */
 
 console.log('HELLO 🚀')
+
+const searchButton = document.querySelector('.button--search--js');
+
+searchButton.addEventListener('click', (e) =>{
+    e.preventDefault();    
+    window.location.replace("http://localhost:8080/restaurant.html");
+});
