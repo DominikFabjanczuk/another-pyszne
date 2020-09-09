@@ -3,6 +3,8 @@
 @import "_variables";
 @import "modules/hello.scss";
 @import "restaurant.scss";
+// @import "~fa-icons";
+@import "~@fortawesome/fontawesome-free/";
 
 body {
   background: lightblue;
@@ -12,8 +14,9 @@ body {
 .top-header {
   display: flex;
   padding: 16px;
+  justify-content: space-between;
   &__logo {
-    width: max-content;
+    width: 100%;
     height: 80px;
     min-width: 80px;
     flex: 0 0 80px;
@@ -25,20 +28,16 @@ body {
   &__restaurant {
     display: flex;
     justify-content: center;
-    align-items: center;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    width: 100%;
     &--button {
       cursor: pointer;
       color: white;
       background: lightblue;
       border: 0;
-      border-bottom: 2px solid white;
     }
   }
-
   &__buttons {
     width: max-content;
     flex: 0 0 68px;
@@ -70,6 +69,7 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  background:white;
 }
 
 .content {
@@ -188,6 +188,7 @@ body {
     display: flex;
     margin: auto;
     width: 80%;
+    max-width: 1320px;
   }
   &--search {
     padding: 16px;
@@ -196,11 +197,17 @@ body {
     height: 35px;
     width: 100%;
     &__input {
-      padding: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 16px;
+      &--wrapper {
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+        width: 100%;
+        border: 1px solid black;
+        background: #fff;
+      }
+      border: 0;
+      outline: none;
       width: 100%;
     }
     &__label {
@@ -225,6 +232,7 @@ body {
     }
   }
   &--parent {
+    max-width: 1320px;
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -234,9 +242,63 @@ body {
     background: orange;
     width: 100%;
     margin-left: 16px;
+    min-width: 540px;
   }
-  &--filters {
-    flex: 0 0 180px;
-    background: blue;
+  
+}
+
+.filters {
+  color:black;
+  flex: 0 0 180px;
+  &__choose{
+    font-weight: bold;
   }
+  &__input{
+    margin-bottom: 5px;
+    &:active{
+      color:orange;
+    }
+    &:hover{
+      color:purple;
+      cursor: pointer;
+    }
+  }
+  &__title{
+    font-weight: bold;
+  }
+  &__buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top:5px;
+  }
+  &__label{
+    &:hover{
+      cursor: default;
+    }    
+  }
+  &__button{
+    width: 45%;
+    border: 1px solid red;
+    background: none;
+    color:red;
+    &:hover{
+      color:green;
+      font-weight: green;
+    }   
+  }
+}
+
+.fa-search {
+  color: lightgrey;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.fa-map-marker-alt {
+  color: black;
+  cursor: pointer;
+}
+
+label{
+  cursor: none;
 }

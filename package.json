@@ -45,6 +45,8 @@
     "websocket-extensions": "^0.1.4"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "fa-icons": "^0.2.0",
     "normalize.css": "^8.0.1"
   }
 }
