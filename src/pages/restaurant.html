@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF Webpack starterkit</title>
-  </head>
-  <body>
-    <header class="top-header">
-      <div class="top-header__logo">
-        <img
-          class="top-header__logo--picture logo--js"
-          src="../assets/img/anotherPyszne.png"
-          alt="Witaj na InnePyszne"
-        />
-      </div>
-      <div class="top-header__restaurant">
-        <button class="top-header__restaurant--button">
-          Piastowska 1/30, Bialystok
-        </button>
-      </div>
-      <div class="top-header__buttons">
-        <button class="top-header__buttons--flag"></button>
-        <button class="top-header__buttons--menu"></button>
-      </div>
-    </header>
-    <main>
-      <section class="order--from">Zamów z {} restauracji</section>
-      <div class="restaurant--types--wrapper">
-        <section class="restaurant--types">
-          <a class="restaurant--type restaurant--type--special">Wszystkie</a>
-          <a class="restaurant--type">Włoska</a>
-          <a class="restaurant--type">Polska</a>
-          <a class="restaurant--type">Sushi</a>
-          <a class="restaurant--type">Chińska</a>
-          <a class="restaurant--type">Pizza</a>
-          <a class="restaurant--type">Burgery</a>
-        </section>
-      </div>
-      <section class="restaurant--list">
-        <div class="restaurant--search">
-          <input class="restaurant--search__input" />
-          <label class="restaurant--search__label">Sortowanie</label>
-          <select class="restaurant--search__dd">
-            <option>Najlepsze dopasowanie</option>
-            <option>2</option>
-            <option>3</option>
-          </select>
-          <span> Lok </span>
-        </div>
+
+<head>
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WTF Webpack starterkit</title>
+</head>
+
+<body>
+  <header class="top-header">
+    <div class="top-header__logo">
+      <img class="top-header__logo--picture logo--js" src="../assets/img/anotherPyszne.png" alt="Witaj na InnePyszne" />
+    </div>
+    <div class="top-header__restaurant">
+      <button class="top-header__restaurant--button">
+        Piastowska 1/30, Bialystok
+      </button>
+    </div>
+    <div class="top-header__buttons">
+      <button class="top-header__buttons--flag"></button>
+      <button class="top-header__buttons--menu"></button>
+    </div>
+  </header>
+  <main>
+    <section class="order--from">Zamów z 10restauracji</section>
+    <div class="restaurant--types--wrapper">
+      <section class="restaurant--types">
+        <a class="restaurant--type restaurant--type--special">Wszystkie</a>
+        <a class="restaurant--type">Włoska</a>
+        <a class="restaurant--type">Polska</a>
+        <a class="restaurant--type">Sushi</a>
+        <a class="restaurant--type">Chińska</a>
+        <a class="restaurant--type">Pizza</a>
+        <a class="restaurant--type">Burgery</a>
       </section>
-      <div class="restaurant--parent">
-        <div class="restaurant--filters">filters</div>
-        <div class="restaurant--items">items</div>
+    </div>
+    <section class="restaurant--list">
+      <div class="restaurant--search">
+        <div class="restaurant--search__input--wrapper">
+          <i class="fas fa-search"></i>
+          <input class="restaurant--search__input" placeholder="Szukaj restauracji" />
+        </div>
+        <label class="restaurant--search__label">Sortowanie</label>
+        <select class="restaurant--search__dd">
+          <option>Najlepsze dopasowanie</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <span class="fas fa-map-marker-alt"></span>
       </div>
-    </main>
-  </body>
+    </section>
+    <div class="restaurant--parent">
+      <div class="filters">
+        <h3 class="filters__title">10 restauracji</h3>
+        <label class="filters__choose">Wybierz</label>
+        <div class=filters__buttons>
+          <button class="filters__button">Dostawa</button>
+          <button class="filters__button">Odbiór</button>
+        </div>
+        <p class="filters__title">Minimalna kwota zamówienia</p>
+        <div class="filters__input">
+          <input type="radio" selected id="noMatter" name="price">
+          <label class="filters__label" for="noMatter">Nie gra roli</label>
+        </div>
+        <div class="filters__input">
+          <input type="radio" selected id="25orLess" name="price">
+          <label class="filters__label" for="25orLess">25,00 zł lub mniej</label>
+        </div>
+        <div class="filters__input">
+          <input type="radio" selected id="50orLess" name="price">
+          <label class="filters__label" for="50orLess">50,00 zł lub mniej</label>
+        </div>
+      </div>
+      <div class="restaurant--items">items</div>
+    </div>
+  </main>
+</body>
+
 </html>
