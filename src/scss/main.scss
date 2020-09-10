@@ -3,7 +3,6 @@
 @import "_variables";
 @import "modules/hello.scss";
 @import "restaurant.scss";
-// @import "~fa-icons";
 @import "~@fortawesome/fontawesome-free/";
 
 body {
@@ -276,14 +275,12 @@ body {
       cursor: default;
     }    
   }
-<<<<<<< HEAD
   &--filters {
     flex: 0 0 180px;
     background: blue;
     @media (max-width: 800px){
       display: none;
     }
-=======
   &__button{
     width: 45%;
     border: 1px solid red;
@@ -293,8 +290,9 @@ body {
       color:green;
       font-weight: green;
     }   
->>>>>>> refs/remotes/origin/master
   }
+  }
+
 }
 
 .fa-search {
@@ -306,8 +304,4 @@ body {
 .fa-map-marker-alt {
   color: black;
   cursor: pointer;
-}
-
-label{
-  cursor: none;
 }
