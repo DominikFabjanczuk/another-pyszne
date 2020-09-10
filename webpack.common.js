@@ -85,7 +85,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/restaurant.html",
       inject: true,
-      chunks: ["index", "restaurant"],
+      chunks: ["restaurant"],
       filename: "restaurant.html",
     }),
   ],
